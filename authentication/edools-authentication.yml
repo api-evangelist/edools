@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.edools.com/file.05_api.html
+docs: https://docs.edools.com/file.05_api.html
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+  note: >-
+    Token-based API key authentication. Each ApiKey has a token and a secret,
+    generated at creation; combined they form the "credentials". Credentials
+    are provisioned by Edools support on request. There is no OAuth surface.
+schemes:
+- name: TokenAuth
+  type: apiKey
+  in: header
+  header_name: Authorization
+  format: 'Authorization: Token token="CREDENTIALS"'
+  description: >-
+    API token credentials (token + secret combined) passed in the Authorization
+    header using the Rails-style Token scheme.
+  sources: [https://docs.edools.com/file.05_api.html]
+versioning_header:
+  name: Accept
+  value: application/vnd.edools.core.v1+json
+  description: >-
+    API version is negotiated via a vendor Accept media type rather than a URL
+    path segment.

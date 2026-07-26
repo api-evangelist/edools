@@ -1,0 +1,26 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/package/edools-theme-cli + https://www.npmjs.com/package/@edools/epm
+clis:
+- name: edools-theme-cli
+  scope: theme-development
+  version: 3.1.2
+  install:
+  - npm install -g edools-theme-cli
+  repo: https://github.com/Edools/edools-theme-cli
+  registry: https://www.npmjs.com/package/edools-theme-cli
+  description: >-
+    Starter kit / CLI for scaffolding, developing, and deploying custom Edools
+    school themes (HTML/CSS/Liquid).
+- name: "@edools/epm"
+  scope: apps-management
+  version: 0.3.3
+  install:
+  - npm install -g @edools/epm
+  repo: https://github.com/Edools/epm
+  registry: https://www.npmjs.com/package/@edools/epm
+  description: Edools Package Manager — apps/package management tooling for the
+    Edools platform.
+note: >-
+  Edools does not publish a general-purpose REST-API CLI; the first-party CLI
+  surface is theme development and app/package management tooling.

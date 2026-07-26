@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.edools.com/file.05_api.html
+format: http-status
+envelope:
+  description: >-
+    Errors are signaled with standard HTTP status codes. Validation failures
+    (422 Unprocessable Entity) return a structured body identifying the
+    resource, the offending field, and an error code.
+  validation_shape:
+    status: 422
+    fields: [resource, field, code]
+problems:
+- status: 401
+  title: Unauthorized
+  meaning: Missing or invalid API token credentials.
+  remediation: >-
+    Send a valid Authorization header ('Authorization: Token token="CREDENTIALS"')
+    with credentials provisioned by Edools support.
+- status: 404
+  title: Not Found
+  meaning: The requested resource (e.g. a school product) does not exist or is
+    not accessible to the school.
+- status: 422
+  title: Unprocessable Entity
+  meaning: Validation error; the response identifies the resource, field, and
+    an error code.
+- status: 500
+  title: Internal Server Error
+  meaning: Unexpected server-side error.

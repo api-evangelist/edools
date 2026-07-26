@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/Edools + npm registry
+packages:
+- language: ruby
+  registry: github
+  name: edools-ruby
+  url: https://github.com/Edools/edools-ruby
+  install: "gem 'edools', git: 'https://github.com/Edools/edools-ruby'"
+  official: true
+  note: >-
+    Official Edools Ruby client library (Edools GitHub org). Source-only; not
+    published to RubyGems. The public "edools" gem on RubyGems is a
+    third-party wrapper, not first-party.
+- language: php
+  registry: github
+  name: edools-php
+  url: https://github.com/Edools/edools-php
+  install: composer require edools/edools-php (from source)
+  official: true
+  note: Official Edools PHP client library (Edools GitHub org). Source-only.
+- language: javascript
+  registry: npm
+  name: "@edools/epm"
+  url: https://www.npmjs.com/package/@edools/epm
+  install: npm install -g @edools/epm
+  version: 0.3.3
+  official: true
+  note: Edools apps/package management tool (Edools Package Manager).
+- language: javascript
+  registry: npm
+  name: edools-theme-cli
+  url: https://www.npmjs.com/package/edools-theme-cli
+  install: npm install -g edools-theme-cli
+  version: 3.1.2
+  official: true
+  note: Official starter kit / CLI for building Edools school themes.

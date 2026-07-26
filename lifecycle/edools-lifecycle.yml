@@ -1,0 +1,16 @@
+generated: '2026-07-19'
+method: searched
+source: https://status.herospark.com/ + https://docs.edools.com/file.05_api.html
+versioning:
+  scheme: accept-media-type
+  current: v1
+  media_type: application/vnd.edools.core.v1+json
+  docs: https://docs.edools.com/file.05_api.html
+status_page: https://status.herospark.com/
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No formal deprecation / Sunset-header policy is published.
+sla:
+  url: null
+  uptime_target: null

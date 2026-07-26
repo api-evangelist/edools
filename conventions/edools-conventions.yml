@@ -1,0 +1,40 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.edools.com/file.05_api.html
+authentication:
+  style: api-key-header
+  header: 'Authorization: Token token="CREDENTIALS"'
+  ref: authentication/edools-authentication.yml
+versioning:
+  style: accept-media-type
+  header: Accept
+  value: application/vnd.edools.core.v1+json
+  current: v1
+pagination:
+  style: page-number
+  params:
+    page:
+      description: 1-based page index
+      default: 1
+    per_page:
+      description: Items per page
+      default: 10
+      max: 100
+  note: Responses default to 10 items per page.
+data_format:
+  media_type: application/json
+  timestamps: ISO 8601 (YYYY-MM-DDTHH:MM:SSZ)
+  null_fields: empty fields are returned as null
+http_methods: [HEAD, GET, POST, PATCH, PUT, DELETE]
+error_envelope:
+  style: http-status + validation-metadata
+  validation_status: 422
+  shape: >-
+    Validation failures (422) return structured metadata identifying the
+    resource, the field, and an error code.
+  ref: errors/edools-problem-types.yml
+idempotency:
+  supported: false
+  note: No idempotency-key mechanism is documented by the provider.
+rate_limiting:
+  documented: false

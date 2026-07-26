@@ -1,7 +1,17 @@
 aid: edools
 name: Edools
-description: Edools is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Edools is a Brazilian e-learning and digital-education platform for creating,
+  hosting, and selling online courses, learning paths, and training programs
+  under a white-label school (LMS) with a Netflix-style members area, video
+  hosting, and student engagement tools. The platform is now delivered as
+  HeroSpark (edools.com redirects to herospark.com), a digital-product sales
+  suite for course creators covering checkout, payments (SparkPay), members
+  areas, and a student mobile app. Edools exposes a token-authenticated REST
+  API (base host per-school on myedools.com) for team, content, and student
+  management, plus first-party Ruby and PHP client libraries and theme
+  development tooling, letting integrators sync courses, students, enrollments,
+  and school products with external systems.
 url: https://raw.githubusercontent.com/api-evangelist/edools/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,17 +19,109 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://herospark.com/favicon.ico
 tags:
 - Company
-apis: []
+- Education
+- E-Learning
+- LMS
+- Online Courses
+- EdTech
+- Content Management
+- Digital Products
+- Brazil
+- REST
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Edools Core API
+  description: >-
+    Token-authenticated REST API for managing an Edools school — team and role
+    administration, content (courses, learning paths, lessons, media), student
+    management and engagement triggers, and school products. Base host is the
+    school's own myedools.com subdomain; versioning is negotiated with a vendor
+    Accept media type.
+  humanURL: https://docs.edools.com/file.05_api.html
+  baseURL: https://sua-escola.myedools.com/api
+  tags:
+  - Education
+  - LMS
+  - Content Management
+  - Students
+  properties:
+  - type: APIReference
+    url: https://docs.edools.com/file.05_api.html
+  - type: Authentication
+    url: authentication/edools-authentication.yml
+  - type: Conventions
+    url: conventions/edools-conventions.yml
+  - type: ErrorCatalog
+    url: errors/edools-problem-types.yml
 common:
 - type: Website
   url: https://edools.com
+- type: DeveloperPortal
+  url: https://plataforma.edools.com/desenvolvedores
+- type: Documentation
+  url: https://docs.edools.com
+- type: APIReference
+  url: https://docs.edools.com/file.05_api.html
+- type: Support
+  url: https://ajuda.herospark.com/
+- type: Blog
+  url: https://herospark.com/blog/
+- type: Pricing
+  url: https://herospark.com/calculadora-de-taxas
+- type: SignUp
+  url: https://app.herospark.com/sign-up
+- type: Login
+  url: https://app.herospark.com/login
+- type: TermsOfService
+  url: https://herospark.com/termos-de-uso-herospark/
+- type: PrivacyPolicy
+  url: https://herospark.com/politicas-de-privacidade/
+- type: GitHubOrganization
+  url: https://github.com/Edools
+- type: StatusPage
+  url: https://status.herospark.com/
+- type: Authentication
+  url: authentication/edools-authentication.yml
+- type: Conventions
+  url: conventions/edools-conventions.yml
+- type: ErrorCatalog
+  url: errors/edools-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/edools-lifecycle.yml
+- type: Packages
+  url: packages/edools-packages.yml
+- type: SDKs
+  url: packages/edools-packages.yml
+- type: CLI
+  url: cli/edools-cli.yml
+- type: DomainSecurity
+  url: security/edools-domain-security.yml
+- type: LLMsTxt
+  url: llms/edools-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

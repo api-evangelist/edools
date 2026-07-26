@@ -1,0 +1,29 @@
+# Edools
+
+> Edools is a Brazilian e-learning / LMS platform for creating, hosting, and selling online courses, learning paths, and training programs under a white-label school. It is now delivered as HeroSpark (edools.com redirects to herospark.com). Edools exposes a token-authenticated REST API on each school's myedools.com subdomain for team, content, and student management, plus first-party Ruby and PHP client libraries and theme tooling.
+
+## API
+
+- [Edools Core API reference](https://docs.edools.com/file.05_api.html): Token-authenticated REST API — base host https://sua-escola.myedools.com/api; auth via `Authorization: Token token="CREDENTIALS"`; version negotiated with `Accept: application/vnd.edools.core.v1+json`.
+- [Developer portal (beta)](https://plataforma.edools.com/desenvolvedores): Newer developer documentation surface.
+- [Documentation home](https://docs.edools.com): Theme customization and API guides.
+
+## Artifacts
+
+- [Authentication profile](authentication/edools-authentication.yml): API-key token header scheme.
+- [API conventions](conventions/edools-conventions.yml): pagination (page/per_page), versioning, JSON/ISO-8601, error envelope.
+- [Error catalog](errors/edools-problem-types.yml): HTTP status semantics + 422 validation shape.
+- [Lifecycle](lifecycle/edools-lifecycle.yml): media-type versioning + status page.
+- [Packages / SDKs](packages/edools-packages.yml): Ruby and PHP client libraries, theme CLI, epm.
+- [CLI](cli/edools-cli.yml): edools-theme-cli, @edools/epm.
+- [Domain security](security/edools-domain-security.yml): TLS/HSTS/DNS probe results.
+
+## Docs
+
+- [Help center](https://ajuda.herospark.com/)
+- [Blog](https://herospark.com/blog/)
+- [Pricing](https://herospark.com/calculadora-de-taxas)
+- [Status](https://status.herospark.com/)
+- [Terms of Service](https://herospark.com/termos-de-uso-herospark/)
+- [Privacy Policy](https://herospark.com/politicas-de-privacidade/)
+- [GitHub organization](https://github.com/Edools)
